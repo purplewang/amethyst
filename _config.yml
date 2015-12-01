@@ -1,0 +1,18 @@
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://amethyst.wang-hoyer.com"
+
+defaults:
+  - scope:
+      path: ""
+      type: samples
+    values:
+      layout: sample
+
+collections:
+  samples:
+    output: true
+    permalink: /samples/:path/
+
+# Build settings
+markdown: kramdown

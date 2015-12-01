@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<ul class="sample-list">
+    {% for sample in site.samples | sort: 'date' %}
+        <li class="sample-list__item">
+            <h3><a class="sample-list__title" href="{{ sample.url }}">{{ sample.title }}</a></h3>
+            {% if sample.description %}
+                <p class="sample-list__description">{{ sample.description }}</p>
+            {% endif %}
+
+            <p class="sample-list__except">{{ sample.excerpt | strip_html | strip_newlines | truncate: 160 }} <a href="{{ sample.url }}">Read More</a></p>
+        </li>
+    {% endfor %}
+</ul>
